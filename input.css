@@ -10,3 +10,31 @@
     font-family: "Roboto", sans-serif;
   }
 }
+
+@layer components {
+  .slider-title {
+    @apply text-sm font-semibold;
+  }
+  .title {
+    @apply text-center text-dnetblue-default font-bold text-2xl;
+  }
+  .key-list {
+    @apply list-disc list-inside pl-6;
+  }
+
+  .key-list li {
+    @apply text-yellow-400 py-1;
+  }
+  .key-list li span {
+    @apply text-[#4c5158];
+  }
+  .owl-nav {
+    @apply absolute top-0  w-full;
+  }
+  .owl-carousel .owl-nav button.owl-next {
+    @apply -right-6 absolute bg-white rounded-full hover:bg-blue-300 h-10 w-10 p-6 top-56 text-3xl shadow-lg;
+  }
+  .owl-carousel .owl-nav button.owl-prev {
+    @apply -left-6 absolute bg-white rounded-full hover:bg-blue-300 h-10 w-10 p-6 top-56 text-3xl shadow-lg;
+  }
+}
