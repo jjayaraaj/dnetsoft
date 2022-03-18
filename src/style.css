@@ -593,6 +593,109 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(147 197 253 / var(--tw-bg-opacity));
 }
 
+.perspective a{
+  display: inline-flex;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(56 94 151 / var(--tw-text-opacity));
+}
+
+.tailored-card{
+  position: relative;
+  height: 16rem;
+}
+
+.tailored-card > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.tailored-card{
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.tailored-card__main{
+  position: relative;
+  z-index: 10;
+  margin-bottom: 3rem;
+  display: flex;
+  height: 90%;
+  padding: 1.5rem;
+}
+
+.tailored-card__content{
+  position: absolute;
+  height: 100%;
+  --tw-translate-y: 7rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.group:hover .tailored-card__content{
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.tailored-card__content___title{
+  width: 75%;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tailored-card__content a{
+  margin-top: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.services-story{
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+  --tw-gradient-from: #385e97;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(56 94 151 / 0));
+  --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgb(0 0 0 / 0));
+  --tw-gradient-to: transparent;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-delay: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .services-story{
+  --tw-gradient-stops: var(--tw-gradient-from), #385e97, var(--tw-gradient-to, rgb(56 94 151 / 0));
+}
+
 .visible{
   visibility: visible;
 }
@@ -620,6 +723,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
 }
 
 .block{
@@ -670,8 +777,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 2.5rem;
 }
 
-.h-\[600px\]{
-  height: 600px;
+.h-\[700px\]{
+  height: 700px;
 }
 
 .h-full{
@@ -682,12 +789,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1rem;
 }
 
+.h-72{
+  height: 18rem;
+}
+
 .h-64{
   height: 16rem;
 }
 
-.h-72{
-  height: 18rem;
+.w-full{
+  width: 100%;
 }
 
 .w-3\/4{
@@ -698,10 +809,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2.5rem;
 }
 
-.w-full{
-  width: 100%;
-}
-
 .w-2\/4{
   width: 50%;
 }
@@ -710,8 +817,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1rem;
 }
 
-.w-6\/12{
-  width: 50%;
+.w-5\/12{
+  width: 41.666667%;
+}
+
+.w-4\/6{
+  width: 66.666667%;
 }
 
 .max-w-screen-xl{
@@ -803,6 +914,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
 .rounded-2xl{
   border-radius: 1rem;
 }
@@ -855,8 +970,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
 }
 
+.bg-yellow-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-b{
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\.\/images\/image1\.jpg\)\]{
+  background-image: url(./images/image1.jpg);
 }
 
 .from-blue-200{
@@ -875,6 +999,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-16{
   padding: 4rem;
+}
+
+.p-3{
+  padding: 0.75rem;
+}
+
+.p-10{
+  padding: 2.5rem;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .px-10{
@@ -917,6 +1053,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.5rem;
 }
 
+.pt-5{
+  padding-top: 1.25rem;
+}
+
+.pt-10{
+  padding-top: 2.5rem;
+}
+
+.pt-0{
+  padding-top: 0px;
+}
+
 .text-center{
   text-align: center;
 }
@@ -954,6 +1102,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 300;
 }
 
+.leading-6{
+  line-height: 1.5rem;
+}
+
 .text-dnetblue-default{
   --tw-text-opacity: 1;
   color: rgb(56 94 151 / var(--tw-text-opacity));
@@ -967,6 +1119,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-yellow-400{
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity));
+}
+
+.text-yellow-500{
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity));
 }
 
 .shadow-lg{
