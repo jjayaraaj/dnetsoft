@@ -12,6 +12,10 @@
 }
 
 @layer components {
+  .menu a {
+    @apply text-white text-sm;
+  }
+
   .slider-title {
     @apply text-sm font-semibold;
   }
@@ -63,5 +67,16 @@
 
   .services-story {
     @apply absolute h-full w-full bg-transparent bg-gradient-to-t from-dnetblue-default via-transparent  to-transparent block  group-hover:via-dnetblue-default   transition ease-in-out delay-150;
+  }
+
+  .link {
+    @apply inline-flex text-xs text-white font-bold items-center gap-x-2 uppercase;
+  }
+
+  .bg-dyellow {
+    @apply bg-[#f2bf3d];
+  }
+  .footer-link {
+    @apply block text-xs;
   }
 }
