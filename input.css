@@ -79,4 +79,16 @@
   .footer-link {
     @apply block text-xs;
   }
+  .accord li {
+    @apply relative border-y-2   border-gray-200;
+  }
+  .accord li .action {
+    @apply w-full  py-6 text-left;
+  }
+  .accord li .action-title {
+    @apply flex items-center justify-between font-bold text-base text-dnetblue-dark;
+  }
+  .accord li .content {
+    @apply relative overflow-hidden transition-all max-h-0 duration-700;
+  }
 }
